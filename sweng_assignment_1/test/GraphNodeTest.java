@@ -48,6 +48,16 @@ public class GraphNodeTest
         assert parentNode.leftBranch().id()==leftNode.id();
     }
     
+    @Test
+    public void testRightBranch()
+    {
+        GraphNode parentNode = new GraphNode(0, null);
+        GraphNode rightNode = new GraphNode(1, parentNode);
+        parentNode.addChild(rightNode);         //children always added left first, this may need to be changed
+        parentNode.addChild(rightNode);
+        assert parentNode.rightBranch().id()==rightNode.id();
+    }
+    
     @Before
     public void setUp()
     {
