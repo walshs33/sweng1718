@@ -58,6 +58,15 @@ public class GraphNodeTest
         assert parentNode.rightBranch().id()==rightNode.id();
     }
     
+    @Test
+    public void testParent()
+    {
+        GraphNode parentNode = new GraphNode(0, null);
+        GraphNode childNode = new GraphNode(1, parentNode);
+        assert childNode.parent().id()==parentNode.id();
+
+    }
+    
     @Before
     public void setUp()
     {
