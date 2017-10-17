@@ -18,6 +18,7 @@ public class ass_1_test
     
     public ass_1_test()
     {
+        
     }
     
     @Before
