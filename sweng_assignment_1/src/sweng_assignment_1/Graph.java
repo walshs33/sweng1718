@@ -11,5 +11,29 @@ package sweng_assignment_1;
  */
 public class Graph
 {
+    private int nodes;
+    private GraphNode root;
+    
+    public Graph()
+    {
+        this.nodes = 0;
+        this.root = null;
+    }
+    
+    public Graph(GraphNode root)
+    {
+        this.nodes = 1;
+        this.root = root;
+    }
+    
+    public int nodes()
+    {
+        return this.nodes;
+    }
+    
+    public GraphNode root()
+    {
+        return this.root;
+    }
     
 }
