@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 import sweng_assignment_1.Graph;
 /**
  *
- * @author sam
+ * @author Sam Walsh - 12304297
  */
 public class GraphTest
 {
@@ -30,4 +30,17 @@ public class GraphTest
         Graph test = new Graph(null);
     }
     
+    @Test
+    public void testNodes1()
+    {
+        Graph test = new Graph();
+        assert test.nodes()==0;
+    }
+    
+    @Test
+    public void testNodes2()
+    {
+        Graph test = new Graph(null);
+        assert test.nodes()==0;
+    }
 }

@@ -14,7 +14,7 @@ import sweng_assignment_1.GraphNode;
 
 /**
  *
- * @author sam
+ * @author Sam Walsh - 12304297
  */
 public class GraphNodeTest
 {

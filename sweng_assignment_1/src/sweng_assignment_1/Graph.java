@@ -22,7 +22,14 @@ public class Graph
     
     public Graph(GraphNode root)
     {
-        this.nodes = 1;
+        if(root==null)
+        {
+            this.nodes = 0;
+        }
+        else
+        {
+            this.nodes = 1;
+        }
         this.root = root;
     }
     
