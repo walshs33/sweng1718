@@ -43,4 +43,17 @@ public class Graph
         return this.root;
     }
     
+    //no verification that the root is null, assuming good input
+    public void addRoot(GraphNode root)
+    {
+        this.root = root;
+        nodes++;
+    }
+    
+    //no verification that there is a free space for node, assuming good input
+    public void addNode(GraphNode parent, GraphNode child)
+    {
+        parent.addChild(child);
+        nodes++;
+    }
 }
