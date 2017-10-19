@@ -59,12 +59,20 @@ public class GraphNodeTest
     }
     
     @Test
-    public void testParent()
+    public void testParent1()
     {
         GraphNode parentNode = new GraphNode(0, null);
         GraphNode childNode = new GraphNode(1, parentNode);
         assert childNode.parent().id()==parentNode.id();
-
+    }
+    
+    @Test
+    public void testParent2()
+    {
+        GraphNode parentNode = new GraphNode(0,null);
+        GraphNode childNode = new GraphNode(1,null);
+        childNode.addParent(parentNode);
+        assert childNode.parent().id()==parentNode.id();
     }
     
     @Before

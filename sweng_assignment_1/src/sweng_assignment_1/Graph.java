@@ -54,6 +54,18 @@ public class Graph
     public void addNode(GraphNode parent, GraphNode child)
     {
         parent.addChild(child);
+        child.addParent(parent);
         nodes++;
+    }
+    
+    public int[] ancestors(GraphNode node)
+    {
+        GraphNode workingNode = node;
+        int noOfAncestors = 0;
+        int[] ancestors = new int[noOfAncestors];
+        while(node.parent()!=null)
+        {
+            noOfAncestors++;
+        }
     }
 }

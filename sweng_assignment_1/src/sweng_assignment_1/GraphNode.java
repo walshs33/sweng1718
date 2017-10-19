@@ -56,4 +56,9 @@ public class GraphNode
         }
     }
     
+    public void addParent(GraphNode parent)
+    {
+        this.parent = parent;
+    }
+    
 }
