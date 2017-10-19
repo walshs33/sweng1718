@@ -5,6 +5,7 @@
  */
 package sweng_assignment_1;
 
+import java.util.ArrayList;
 /**
  *
  * @author Sam Walsh - 12304297
@@ -58,14 +59,18 @@ public class Graph
         nodes++;
     }
     
-    public int[] ancestors(GraphNode node)
+    //have to use Integer and not int because java
+    public Integer[] ancestors(GraphNode node)
     {
         GraphNode workingNode = node;
-        int noOfAncestors = 0;
-        int[] ancestors = new int[noOfAncestors];
-        while(node.parent()!=null)
+        ArrayList<Integer> ancestors = new ArrayList<Integer>();
+        while(node!=null)
         {
-            noOfAncestors++;
+            ancestors.add(node.id());
+            node = node.parent();
         }
+        Integer[] result = ancestors.toArray(new Integer[0]);
+        
+        return result;
     }
 }

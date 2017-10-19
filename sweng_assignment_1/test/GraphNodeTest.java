@@ -23,16 +23,6 @@ public class GraphNodeTest
     {
     }
     
-    @BeforeClass
-    public static void setUpClass()
-    {
-    }
-    
-    @AfterClass
-    public static void tearDownClass()
-    {
-    }
-    
     @Test
     public void testConstructor()
     {
@@ -74,15 +64,4 @@ public class GraphNodeTest
         childNode.addParent(parentNode);
         assert childNode.parent().id()==parentNode.id();
     }
-    
-    @Before
-    public void setUp()
-    {
-    }
-    
-    @After
-    public void tearDown()
-    {
-    }
-    
 }

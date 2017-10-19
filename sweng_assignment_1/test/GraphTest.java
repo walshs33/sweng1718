@@ -63,4 +63,18 @@ public class GraphTest
         assert test.root().leftBranch().id()==1;
         assert test.root().rightBranch().id()==2;
     }
+    
+    @Test
+    public void testAncestors()
+    {
+        Graph test = new Graph(new GraphNode(0, null));
+        test.addNode(test.root(), new GraphNode(1,null));
+        GraphNode testNode = new GraphNode(2,null);
+        test.addNode(test.root().leftBranch(), testNode);
+        Integer[] testArray = new Integer[2];
+        testArray[0]=2;
+        testArray[1]=1;
+        assert test.ancestors(testNode)[0]==testArray[0]; 
+        assert test.ancestors(testNode)[1]==testArray[1]; 
+    }
 }
