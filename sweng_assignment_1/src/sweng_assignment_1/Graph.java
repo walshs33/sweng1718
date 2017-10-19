@@ -73,4 +73,38 @@ public class Graph
         
         return result;
     }
+    
+    public int lowestCommonAncestor(GraphNode nodeA, GraphNode nodeB)
+    {
+        Integer[] ancestorsA = ancestors(nodeA);
+        Integer[] ancestorsB = ancestors(nodeB);
+        
+        int len = ancestorsB.length;
+        
+        if(ancestorsA.length > ancestorsB.length)
+        {
+            Integer[] tmp = ancestorsA;
+            ancestorsA = ancestorsB;
+            ancestorsB = tmp;
+        }
+        
+        int ancestorId = 0;
+        for(int i = len; i>=0; i--)
+        {
+            if(ancestorsA[i]==ancestorsB[i])
+            {
+                ancestorId = ancestorsA[i];
+            }
+        }
+        
+//        Integer[] truncatedAncestorsB = new Integer[len]; 
+//        for(int i = len; i>=0; i--)
+//        {
+//            truncatedAncestorsB[i]=ancestorsB[i];
+//        }
+        
+        
+        
+        return ancestorId;
+    }
 }
