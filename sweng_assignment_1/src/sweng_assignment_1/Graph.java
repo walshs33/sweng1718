@@ -79,32 +79,20 @@ public class Graph
         Integer[] ancestorsA = ancestors(nodeA);
         Integer[] ancestorsB = ancestors(nodeB);
         
-        int len = ancestorsB.length;
-        
-        if(ancestorsA.length > ancestorsB.length)
-        {
-            Integer[] tmp = ancestorsA;
-            ancestorsA = ancestorsB;
-            ancestorsB = tmp;
-        }
+        int lenA = ancestorsA.length;
+        int lenB = ancestorsB.length;
         
         int ancestorId = 0;
-        for(int i = len; i>=0; i--)
+        for(int i = lenA-1; i>=0; i--)
         {
-            if(ancestorsA[i]==ancestorsB[i])
+            for(int j = lenB-1; j>=0; j--)
             {
-                ancestorId = ancestorsA[i];
+                if(ancestorsA[i]==ancestorsB[j])
+                {
+                    ancestorId = ancestorsA[i];
+                }
             }
         }
-        
-//        Integer[] truncatedAncestorsB = new Integer[len]; 
-//        for(int i = len; i>=0; i--)
-//        {
-//            truncatedAncestorsB[i]=ancestorsB[i];
-//        }
-        
-        
-        
         return ancestorId;
     }
 }

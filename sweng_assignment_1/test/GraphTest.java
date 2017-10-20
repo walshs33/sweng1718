@@ -77,4 +77,24 @@ public class GraphTest
         assert test.ancestors(testNode)[0]==testArray[0]; 
         assert test.ancestors(testNode)[1]==testArray[1]; 
     }
+    
+    @Test
+    public void testLCA()
+    {
+        Graph test = new Graph(new GraphNode(0,null));
+        GraphNode nodeA = new GraphNode(1,null);
+        GraphNode nodeB = new GraphNode(2,null);
+        test.addNode(test.root(), nodeA);
+        test.addNode(test.root(), nodeB);
+        assert test.lowestCommonAncestor(nodeA, nodeB) == 0;
+        GraphNode nodeC = new GraphNode(3,null);
+        GraphNode nodeD= new GraphNode(4,null);
+        GraphNode nodeE = new GraphNode(5,null);
+        test.addNode(nodeA, nodeC);
+        test.addNode(nodeC, nodeD);
+        test.addNode(nodeA, nodeE);
+        assert test.lowestCommonAncestor(nodeD, nodeE) == 1;
+        assert test.lowestCommonAncestor(nodeE, nodeD) == 1;
+        
+    }
 }
