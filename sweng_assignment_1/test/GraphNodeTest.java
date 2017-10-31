@@ -30,6 +30,12 @@ public class GraphNodeTest
     }
     
     @Test
+    public void testConstructor2()
+    {
+        GraphNode newNode = new GraphNode(0);
+    }
+    
+    @Test
     public void testBranches()
     {
         GraphNode testNode = new GraphNode(0);
@@ -59,41 +65,5 @@ public class GraphNodeTest
         assert parents[0].id() == 1;
         assert parents[1].id() == 2;
         assert parents[2].id() == 3;
-    }
-    
-//    @Test
-//    public void testLeftBranch()
-//    {
-//        GraphNode parentNode = new GraphNode(0, null);
-//        GraphNode leftNode = new GraphNode(1, parentNode);
-//        parentNode.addChild(leftNode);
-//        assert parentNode.leftBranch().id()==leftNode.id();
-//    }
-//    
-//    @Test
-//    public void testRightBranch()
-//    {
-//        GraphNode parentNode = new GraphNode(0, null);
-//        GraphNode rightNode = new GraphNode(1, parentNode);
-//        parentNode.addChild(rightNode);         //children always added left first, this may need to be changed
-//        parentNode.addChild(rightNode);
-//        assert parentNode.rightBranch().id()==rightNode.id();
-//    }
-    
-//    @Test
-//    public void testParent1()
-//    {
-//        GraphNode parentNode = new GraphNode(0, null);
-//        GraphNode childNode = new GraphNode(1, parentNode);
-//        assert childNode.parent().id()==parentNode.id();
-//    }
-//    
-//    @Test
-//    public void testParent2()
-//    {
-//        GraphNode parentNode = new GraphNode(0,null);
-//        GraphNode childNode = new GraphNode(1,null);
-//        childNode.addParent(parentNode);
-//        assert childNode.parent().id()==parentNode.id();
-//    }
+    }    
 }
