@@ -91,23 +91,31 @@ public class GraphTest
         assert test.ancestors(test4).get(4)==5;
     }
     
-//    @Test
-//    public void testLCA()
-//    {
-//        Graph test = new Graph(new GraphNode(0,null));
-//        GraphNode nodeA = new GraphNode(1,null);
-//        GraphNode nodeB = new GraphNode(2,null);
-//        test.addNode(test.root(), nodeA);
-//        test.addNode(test.root(), nodeB);
-//        assert test.lowestCommonAncestor(nodeA, nodeB) == 0;
-//        GraphNode nodeC = new GraphNode(3,null);
-//        GraphNode nodeD= new GraphNode(4,null);
-//        GraphNode nodeE = new GraphNode(5,null);
-//        test.addNode(nodeA, nodeC);
-//        test.addNode(nodeC, nodeD);
-//        test.addNode(nodeA, nodeE);
-//        assert test.lowestCommonAncestor(nodeD, nodeE) == 1;
-//        assert test.lowestCommonAncestor(nodeE, nodeD) == 1;
-//        
-//    }
+    @Test
+    public void testLCA()
+    {
+        Graph test = new Graph(new GraphNode(0));
+        GraphNode test1 = new GraphNode(1);
+        GraphNode test2 = new GraphNode(2);
+        GraphNode test3 = new GraphNode(3);
+        GraphNode test4= new GraphNode(4);
+        GraphNode test5 = new GraphNode(5);
+        GraphNode test6 = new GraphNode(6);
+        GraphNode test7 = new GraphNode(7);
+        GraphNode test8 = new GraphNode(8);
+        test.addNode(test.root(), test1);
+        test.addNode(test.root(), test2);
+        test.addNode(test1, test3);
+        test.addNode(test2, test4);
+        test.addNode(test3, test5);
+        test.addNode(test4, test6);
+        test.addNode(test5, test7);
+        test.addNode(test4, test8);
+        test6.addChild(test8);
+        test8.addParent(test6);
+        assert test.lowestCommonAncestor(test1, test2) == 0;
+        assert test.lowestCommonAncestor(test7, test7) == 0;
+        assert test.lowestCommonAncestor(test7, test8) == 6;
+        
+    }
 }
