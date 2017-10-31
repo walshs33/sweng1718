@@ -70,15 +70,25 @@ public class GraphTest
     @Test
     public void testAncestors()
     {
-        Graph test = new Graph(new GraphNode(0, null));
-        test.addNode(test.root(), new GraphNode(1,null));
-        GraphNode testNode = new GraphNode(2,null);
-        test.addNode(test.root().children()[0], testNode);
-        Integer[] testArray = new Integer[2];
-        testArray[0]=2;
-        testArray[1]=1;
-        assert test.ancestors(testNode)[0]==testArray[0]; 
-        assert test.ancestors(testNode)[1]==testArray[1]; 
+        Graph test = new Graph(new GraphNode(0));
+        GraphNode test1 = new GraphNode(1);
+        GraphNode test2 = new GraphNode(2);
+        GraphNode test3 = new GraphNode(3);
+        GraphNode test4 = new GraphNode(4);
+        test.addNode(test.root(), test1);
+        test.addNode(test1, test2);
+        test.addNode(test2, test3);
+        test.addNode(test3, test4);
+        assert test.ancestors(test4).get(0)==3; 
+        assert test.ancestors(test4).get(1)==2; 
+        assert test.ancestors(test4).get(2)==1; 
+        assert test.ancestors(test4).get(3)==0;
+        
+        GraphNode test5 = new GraphNode(5);
+        test.addNode(test2, test5);
+        test5.addChild(test4);
+        test4.addParent(test5);
+        assert test.ancestors(test4).get(4)==5;
     }
     
 //    @Test

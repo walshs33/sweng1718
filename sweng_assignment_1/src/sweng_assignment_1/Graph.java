@@ -60,24 +60,28 @@ public class Graph
     }
     
     //have to use Integer and not int because java
-    public Integer[] ancestors(GraphNode node)
+    public ArrayList<Integer> ancestors(GraphNode node)
     {
-        GraphNode workingNode = node;
         ArrayList<Integer> ancestors = new ArrayList<Integer>();
-        while(node!=null)
-        {
-            ancestors.add(node.id());
-            node = node.parent();
-        }
-        Integer[] result = ancestors.toArray(new Integer[0]);
+        GraphNode[] parents = node.parents();
         
-        return result;
+        if(node != this.root)
+        {
+        for(int i = 0; i < parents.length; i++)
+        {
+            ancestors.add(parents[i].id());
+            ancestors.addAll(ancestors(parents[i]));
+        }
+        }
+//        Integer[] result = ancestors.toArray(new Integer[0]);
+        
+        return ancestors;
     }
     
     public int lowestCommonAncestor(GraphNode nodeA, GraphNode nodeB)
     {
-        Integer[] ancestorsA = ancestors(nodeA);
-        Integer[] ancestorsB = ancestors(nodeB);
+        Integer[] ancestorsA = ancestors(nodeA).toArray(new Integer[0]);
+        Integer[] ancestorsB = ancestors(nodeB).toArray(new Integer[0]);
         
         int lenA = ancestorsA.length;
         int lenB = ancestorsB.length;
