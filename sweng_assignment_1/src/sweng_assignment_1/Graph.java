@@ -80,20 +80,42 @@ public class Graph
     
     public int lowestCommonAncestor(GraphNode nodeA, GraphNode nodeB)
     {
-        Integer[] ancestorsA = ancestors(nodeA).toArray(new Integer[0]);
-        Integer[] ancestorsB = ancestors(nodeB).toArray(new Integer[0]);
+//        Integer[] ancestorsA = ancestors(nodeA).toArray(new Integer[0]);
+//        Integer[] ancestorsB = ancestors(nodeB).toArray(new Integer[0]);
         
-        int lenA = ancestorsA.length;
-        int lenB = ancestorsB.length;
+        ArrayList ancestorsA = ancestors(nodeA);
+        ArrayList ancestorsB = ancestors(nodeB);
+        
+        int lenA = ancestorsA.size();
+        int lenB = ancestorsB.size();
+        
+        System.out.println("lenA " + lenA + " lenB " + lenB);
+        
+        for(int i = 0; i < lenA; i++)
+        {
+            System.out.print(ancestorsA.get(i) + " A " + i);
+            System.out.println();
+        }
+        for(int i = 0; i < lenB; i++)
+        {
+            System.out.print(ancestorsB.get(i) + " B " + i);
+            System.out.println();
+        }
         
         int ancestorId = 0;
         for(int i = lenA-1; i>=0; i--)
         {
+            System.out.println("a " + i + " " + ancestorsA.get(i));
             for(int j = lenB-1; j>=0; j--)
             {
-                if(ancestorsA[i]==ancestorsB[j])
+            System.out.println("b " + i + " " + ancestorsB.get(j));
+                if(ancestorsA.get(i)==ancestorsB.get(j))
                 {
-                    ancestorId = ancestorsA[i];
+//                    System.out.println(ancestorsA[i]);
+                    if((int) ancestorsA.get(i) > ancestorId)
+                    {
+                        ancestorId = (int) ancestorsA.get(i);
+                    }
                 }
             }
         }
