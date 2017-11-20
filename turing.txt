@@ -1,0 +1,27 @@
+Alan Turing
+
+Intro:
+Born 23 June 1912 in London. School was somewhat difficult, as he had a natural inclination towards mathematics and science, which conflicted with his teacher's views that education should focus on the classics. Despite these difficulties, he continued to show an interest in mathematics, and eventually became the individual commonly regarded as the father of computer science.
+
+University:
+Turing studied mathematics at King's College, Cambridge. At 22 years old he was elected a fellow based on his proof of the central limit theorem, a key theorem in probability theory. Following his election as a fellow, he began work on problems related to computability, devising the concept of the Turing machine. In the late 1930s, TUring spent much of his time at Princeton University as a visiting fellow. Here he worked on cryptology in addition to ordinal logic and computing. He obtained his PhD from Princeton in 1938.
+
+Bletchley Park:
+Turing is regarded as the founder of computer science, but he is also famous for his work during the Second World War, specifically at the Government Code and Cypher School where he was central in breaking German codes. Using information supllied by Polish mathematicians, Turing developed a device which could decode any Enigma message where a portion of plaintext had been guessed correctly. The Turing-Welchman Bombe as this system was called was used routinely to decode Luftwaffe messages, but couldn't break the codes used by the German Navy. In 1941 Turing developed a system that could crack the codes used by the navy, but in 1942 it was rendered obsolete by further German advancements. At this point, electronic technology began to make an appearance at Bletchley Park, which sparked Turing's interest in large-scale electronic machinery.
+
+The Computer:
+By 1942 Turing was an all-purpose consultant to the entire Bletchley Park operation. This gave him access to every cutting-edge idea and technology present there. He spent much of his time learning the intricacies of elctronics, for the purpose of building an electronic Universal Turing Machine, or the first digital computer. By 1944 his concept had coalesced into three primary ideas:
+
+The concept of the Universal Turing Machine
+The speed and reliability of electronic technology
+A single machine which can be programmed to handle different tasks
+
+These three ideas together formed the basis for the modern computer. A fourth idea, the idea of artificial intelligence was another driving factor. In fact, Von Neumann had already developed a similar concept in America but this served only to stimulate the National Physical Laboratory to develop a rival project, which of course Turing would be a key figure in. This project culminated in 1946 with the design of the Automatic Computing Engine or ACE.
+The initial designs of the ACE were such that current technology would be used, but Turing worked on the assumption that as technology advanced, the design would change to accomodate. A key difference between the ACE and the equivalent American systems was that all functionality was implemented through programming, rather than specific pieces of electronic hardware. 1947 saw the first programming language - Turing's Abbrevited Code Instructions take shape. In late 1947, with the ACE in a state of developmental hell Turing was encouraged to spend a year at Cambridge. As he tended to, instead of continuing his work on computing fundamentals, he instead began work on what is now known as neural networks, influenced by his desire to develop a system that could learn for itself. The resulting paper wasn't published until after he had died.
+
+The First Computer is Built:
+While Turing was at Cambridge, the ACE project essentially ground to a halt. Fortunately for Turing, the chair of mathematics at Manchester University had a personal interest in Turing's work and by mid 1948 Manchester University was home to the first demonstration of Turing's principles. Turing became Deputy Director of Manchester's computing laboratory. His job there was mainly related to the programming of the machine.
+Turing's programming work was fairly limited, culminating just in a manual for machine-code programming. Turing had spent the majority of his time flitting between a half-dozen mathematical topics and the applications of a computer in relation to them. He did manage to produce a major paper - Computing Machinery and Intelligence - in which he outlined the now commonly known Turing Test.
+
+Later Work and Death:
+In the early 1950s, Turing was arrested and convicted of gross indecency as a result of his homosexuality. Given the choice between imprisonment and chemical castration he chose the latter. In the subsequent years, his work returned to the topics of his youth, physics and maths, but now with the computational power of a computer to aid him. On the 8th of June 1954, Turing was found dead by his cleaner. His mother believed his death to be accidental, the result of cyanide being ingested after a chemistry experiment, but the coroner ruled his death to be suicide.
