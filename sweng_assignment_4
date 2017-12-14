@@ -1,0 +1,16 @@
+import numpy as np
+import nvd3
+from github import Github
+
+import getpass
+
+#user input
+username = "walshs33"
+pword = getpass.getpass("password: ")
+
+#init git
+g = Github(username, pword)
+
+#set up chart
+chart_type = 'pieChart'
+chart = pieChart(name = chart_type, color_category = 'category20c', height = 450, width = 450)
