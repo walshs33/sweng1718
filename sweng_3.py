@@ -1,7 +1,7 @@
 from github import Github
 import getpass
 
-
+#user input
 username = raw_input("username: ")
 pword = getpass.getpass("password: ")
 
