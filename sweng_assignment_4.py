@@ -22,7 +22,7 @@ def makeChart( xdat, ydat ):
     return;
 
 #user input
-username = "walshs33"
+username = input("username: ")
 pword = getpass.getpass("password: ")
 reponame = input("repo: ")
 
@@ -30,18 +30,16 @@ reponame = input("repo: ")
 g = Github(username, pword)
 
 #get contributors
-#for repo in g.get_user().get_repos():
-#    if repo.full_name == reponame:
-        repo = g.get_user().get_repo(reponame)
-        contributors = repo.get_contributors()
-        xdata = []
-        for contributor in contributors:
-            xdata.insert(len(xdata), contributor.name)
-        #xdata = contributors
-        a = []
-        #get commit count per contributor
-        for contributor in contributors:
-            commits = repo.get_commits(author=contributor)
-            a.insert(len(a), paginatedLen(commits))
+repo = g.get_user().get_repo(reponame)
+contributors = repo.get_contributors()
+xdata = []
+for contributor in contributors:
+    xdata.insert(len(xdata), contributor.name)
+#xdata = contributors
+a = []
+#get commit count per contributor
+for contributor in contributors:
+    commits = repo.get_commits(author=contributor)
+    a.insert(len(a), paginatedLen(commits))
 
-        makeChart( xdat = xdata, ydat = a )
+makeChart( xdat = xdata, ydat = a )
